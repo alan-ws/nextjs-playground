@@ -19,6 +19,8 @@ export async function getStaticProps() {
   const res = await fetch("https://639040c665ff4183110d7bdd.mockapi.io/blogs");
   const posts = res.json();
 
+  console.log(posts[0].title);
+
   return {
     props: {
       posts,
