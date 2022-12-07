@@ -1,6 +1,6 @@
 export function getStaticPaths() {
   console.log("setitng paths");
-  return { paths: [], fallback: true };
+  return { paths: [{ params: { slug: 1 } }], fallback: true };
 }
 
 export async function getStaticProps() {
