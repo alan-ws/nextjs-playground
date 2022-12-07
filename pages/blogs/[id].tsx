@@ -17,7 +17,7 @@ function Blog({
 // revalidation is enabled and a new request comes in
 export async function getStaticProps() {
   const res = await fetch("https://639040c665ff4183110d7bdd.mockapi.io/blogs");
-  const posts = await res.json();
+  const posts = res.json();
 
   return {
     props: {
