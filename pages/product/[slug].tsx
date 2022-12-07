@@ -26,9 +26,10 @@ export default function Product({
   return (
     <div>
       <h1>Product: 1</h1>
-      {data.map((value, index) => {
-        return <p key={index}>{value.name}</p>;
-      })}
+      {data &&
+        data.map((value, index) => {
+          return <p key={index}>{value.name}</p>;
+        })}
     </div>
   );
 }
