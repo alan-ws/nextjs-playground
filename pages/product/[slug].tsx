@@ -1,4 +1,5 @@
 export async function getServerSideProps() {
+  console.log('requesting data');
   const result = await fetch(
     "https://639040c665ff4183110d7bdd.mockapi.io/products"
   );
