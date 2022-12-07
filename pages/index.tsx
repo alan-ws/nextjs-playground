@@ -26,7 +26,7 @@ export default function Home() {
       </Link>
       {InnerLink({ href: "/product/1" })}
       <a
-        href={`https://nextjs-playground-git-7161-alan-ws-team.vercel.app/product/1`}
+        href={"/product/1"}
         onMouseDown={mouseDown}
         onClick={(e) => {
           e.preventDefault();
