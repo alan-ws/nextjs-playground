@@ -2,7 +2,7 @@ export async function getServerSideProps() {
   const result = await fetch(
     "https://639040c665ff4183110d7bdd.mockapi.io/products"
   );
-  const data = result.json();
+  const data = await result.json();
 
   return {
     props: {
