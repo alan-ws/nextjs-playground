@@ -3,6 +3,10 @@ import { useRouter } from "next/router";
 import { useCallback } from "react";
 import styles from "../styles/Home.module.css";
 
+const InnerLink = ({ href }: { href: string }) => {
+  return <a href={href}>INNER PRODUCT LINK</a>;
+};
+
 export default function Home() {
   const router = useRouter();
 
@@ -16,9 +20,11 @@ export default function Home() {
         href={{ pathname: "/product/[slug]", query: { slug: 1 } }}
         as={"/product/[slug]"}
         prefetch={false}
+        onMouseEnter={console.log}
       >
         Product
       </Link>
+      {InnerLink({ href: "/product/1" })}
       <a
         href={`https://nextjs-playground-git-7161-alan-ws-team.vercel.app/product/1`}
         onMouseDown={mouseDown}
