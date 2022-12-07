@@ -15,10 +15,18 @@ export default function Home() {
       <Link
         href={{ pathname: "/product/[slug]", query: { slug: 1 } }}
         as={"/product/[slug]"}
+        prefetch={false}
       >
         Product
       </Link>
-      <a href="/product/1" onMouseDown={mouseDown}>
+      <a
+        href={`https://nextjs-playground-git-7161-alan-ws-team.vercel.app/product/1`}
+        onMouseDown={mouseDown}
+        onClick={(e) => {
+          e.preventDefault();
+          router.push("/product/1");
+        }}
+      >
         Product
       </a>
     </div>
